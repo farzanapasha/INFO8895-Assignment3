@@ -1,6 +1,6 @@
 {
     // ...
-    "image": "mcr.microsoft.com/devcontainers/universal:latest",
+    "build": "Dockerfile",
     "overrideCommand": true,
     "runArgs": [
         "--cap-add=SYS_PTRACE",
