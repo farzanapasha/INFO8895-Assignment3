@@ -7,6 +7,9 @@
         "--security-opt",
         "seccomp=unconfined"
     ],
+    "containerEnv": {
+		"K8S": "k3d"
+	},
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
