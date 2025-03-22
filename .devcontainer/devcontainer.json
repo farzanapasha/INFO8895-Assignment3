@@ -1,6 +1,6 @@
 {
     // ...
-    "build": "Dockerfile",
+    "build": { "dockerfile": "Dockerfile" },
     "overrideCommand": true,
     "runArgs": [
         "--cap-add=SYS_PTRACE",
