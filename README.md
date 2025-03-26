@@ -9,13 +9,20 @@ cd dev && ansible-playbook up.yaml
 
 If that fails you may need some pre-requisites
 
-1. run `ansible-playbook --version` to see if you have ansible. If not run:
+1. Make sure that docker is running by doing `docker ps` until it shows 
+
+```
+CONTAINER ID   IMAGE                            COMMAND                  CREATED         STATUS         PORTS                             NAMES
+
+```
+
+2. run `ansible-playbook --version` to see if you have ansible. If not run:
 
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/conestogac-acsit/cdevops-bootstrap/refs/heads/main/bootstrap.sh)
 ```
 
-2. run `kubectl get ns default` to see if you have a cluster. The expected result is:
+3. run `kubectl get ns default` to see if you have a cluster. The expected result is:
 
 ```
 NAME      STATUS   AGE
