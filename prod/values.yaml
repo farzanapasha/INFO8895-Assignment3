@@ -1,0 +1,28 @@
+redis-cluster:
+  enabled: false
+redis:
+  enabled: false
+postgresql:
+  enabled: false
+postgresql-ha:
+  enabled: false
+
+persistence:
+  enabled: true
+
+gitea:
+  config:
+    database:
+      DB_TYPE: mysql
+      HOST: mysql.prod.svc.cluster.local:3306
+      NAME: gitea
+      USER: root
+      PASSWD: admin_farzana
+      CHARSET: utf8
+      PATH: /
+    session:
+      PROVIDER: memory
+    cache:
+      ADAPTER: memory
+    queue:
+      TYPE: level

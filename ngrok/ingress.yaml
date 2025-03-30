@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gitea-ingress
+  namespace: prod
+  annotations:
+    ngrok.ingress.kubernetes.io/scheme: https
+spec:
+  ingressClassName: ngrok
+  rules:
+    - host: diverse-main-lemur.ngrok-free.app
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gitea-http
+                port:
+                  number: 3000
